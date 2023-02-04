@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+button{
+    padding: 10px;
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
+    background-color: rgb(91, 215, 91);
+}
+button:active{
+    box-shadow: none;
+}
+.btn{
+    margin: 20px 400px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}

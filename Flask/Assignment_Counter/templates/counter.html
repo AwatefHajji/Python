@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css') }}">
+    <title>counter</title>
+</head>
+
+<body>
+    <h1 style="text-align: center; margin-top: 250px;">Counter</h1>
+    <h2 style="text-align: center; m">{{session['num']}} Times</h2>
+    <div class="btn">
+        <div>
+            <form action="/reset_btn" method="post">
+                <button>
+                    <h2>Reset</h2>
+                </button>
+            </form>
+        </div>
+        <div>
+            <form action="/add_btn" method="post">
+                <button>
+                    <h2>+2</h2>
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
