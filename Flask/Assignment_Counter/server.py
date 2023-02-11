@@ -19,7 +19,7 @@ def reset():
 @app.route('/add_btn', methods=['POST'])          
 def add():
     print(session)
-    session['num']+= 1
+    session['num'] += 1
     print(session)
     return redirect('/')
     
