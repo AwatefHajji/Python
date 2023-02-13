@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Dojo Survey</title>
+</head>
+
+<body>
+    {% with messages = get_flashed_messages() %} <!-- declare a variable called messages -->
+    {% if messages %} <!-- check if there are any messages -->
+    {% for message in messages %} <!-- loop through the messages -->
+    <p style="color:red">{{message}}</p> <!-- display each message in a paragraph tag -->
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <form action="/result" method="post" class="col-5 mx-auto border p-5 my-5 text-light bg-dark">
+        <h1 class="text-warning">Dojo Survey</h1>
+        <div class="form-group">
+            <h2>Your Name :<input type="text" name="name" class="form-control"></h2>
+        </div>
+        <div class="form-group">
+            <h2>Dojo Location :<select name="location" class="form-control">
+                    <option value="">--Select Location--</option>
+                    <option value="Tunisia">Tunisia</option>
+                    <option value="Usa">Usa</option>
+                    <option value="Marocco">Marocco</option>
+                </select></h2><br>
+        </div>
+        <div class="form-group">
+            <h2>Favorit Language :<select name="lang" class="form-control">
+                    <option value="">--Choose your favorite Language--</option>
+                    <option value="Java">Java</option>
+                    <option value="Python">Python</option>
+                    <option value="Javascript">Javascript</option>
+                </select></h2>
+        </div>
+        <div class="form-group">
+            <h2>Comment:</h2>
+            <textarea name="comment" class="form-control" cols="30" rows="10"></textarea>
+
+        </div>
+        <input type="submit" class="btn btn-warning btn-outline-dark" value="Submit">
+    </form>
+
+
+</body>
+
+</html>
